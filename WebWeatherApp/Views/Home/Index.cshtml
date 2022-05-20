@@ -1,0 +1,18 @@
+﻿@model Weather
+
+
+
+<body>
+    
+    <div class="container my-5">
+        <h1 class="text-center title ">What's the Weather?</h1>
+        </div>
+   
+
+@using(Html.BeginForm("Index", "Weather", FormMethod.Post))
+    {
+        
+         @Html.TextBoxFor(weather => weather.CityName, new {Class = "form-control text-muted form-rounded p-2 shadow-sm", Type = "text", Placeholder = "What City?", Autocomplete = "off"})
+        
+    }
+    </body> 

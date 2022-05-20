@@ -1,0 +1,57 @@
+﻿@model Weather
+
+
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center title ">What's the Weather?</h1>
+        @using(Html.BeginForm("Index", "Weather", FormMethod.Post))
+    {
+        @Html.TextBoxFor(weather => weather.CityName , new {Class = "form-control text-muted form-rounded p-2 shadow-sm", Type = "text", Placeholder = "What City?", Autocomplete = "off"}) 
+        
+    }
+
+
+ <div class="card rounded my-3 shadow-lg back-card">
+            <div class="card-top text-center">
+              <div class="card-title my-3">
+                  <p>@Model.CityName Forecast</p>
+                  <span>...</span>
+              </div>
+
+              <img src="img/weather background.png" alt="" class="card-img-top" />
+            </div>
+            
+
+            <div class="card-body">
+                <div class="card-mid row">
+                    <div class="col-8 text-center temp">
+                      <span>@Math.Round(Model.Temp)&deg;F</span>  
+                    </div>
+                    <div class="col-4 condition-temp">
+                        <p>High: <b>@Math.Round(Model.TempMax)&deg;F</b></p>
+                        <p>Low: <b>@Math.Round(Model.TempMin)&deg;F</b></p>
+                    </div>
+                </div>
+
+                <div class="icon-container card shadow mx-auto">
+                    <img src="img/thermometer (2).jpg" alt="" />
+                </div>
+
+
+                <div class="card-bottom px-3 py-4 row">
+                  <div class="col text-center">
+                      <p>@Math.Round(Model.FeelsLike)&deg;F</p>
+                      <span>Feels Like</span>
+                  </div>  
+                    <div class="col text-center">
+                        <p>@Model.Humidity%</p>
+                        <span>Humidity</span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        </div>
+        </body>
+
+
