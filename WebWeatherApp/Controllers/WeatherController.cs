@@ -15,6 +15,7 @@ namespace WebWeatherApp.Controllers
              
             return View(weather);
         }
+
         [HttpPost]
         public IActionResult Index(Weather weather)
         {
@@ -29,7 +30,7 @@ namespace WebWeatherApp.Controllers
             var response = client.GetStringAsync(weatherURL).Result;
 
             var formattedResponse = JObject.Parse(response).GetValue("main").ToString();
-
+ 
             var responseObj = (dynamic)JObject.Parse(formattedResponse);
 
             weather1.Temp = responseObj.temp;

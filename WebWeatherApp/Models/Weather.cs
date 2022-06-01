@@ -11,4 +11,5 @@
         public string CityName { get; set; }
         
     }
+
 }
