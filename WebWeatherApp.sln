@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebWeatherApp", "WebWeatherApp\WebWeatherApp.csproj", "{17F934D8-850E-40D5-8BD7-61A9541946DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F65BA123-EB07-4F79-A27C-91FAE1EAC59D}"
-	ProjectSection(SolutionItems) = preProject
-		index.html = index.html
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
