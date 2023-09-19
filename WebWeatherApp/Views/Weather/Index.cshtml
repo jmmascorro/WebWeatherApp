@@ -7,7 +7,7 @@
         <h1 class="text-center title ">What's the Weather?</h1>
         @using(Html.BeginForm("Index", "Weather", FormMethod.Post))
     {
-        @Html.TextBoxFor(weather => weather.CityName , new {Class = "form-control text-muted form-rounded p-2 shadow-sm", Type = "text", Placeholder = "What City?", Autocomplete = "off"}) 
+        @Html.TextBoxFor(weather => weather.CityName, new {Class = "form-control text-muted form-rounded p-2 shadow-sm", Type = "text", Placeholder = "What City?", Autocomplete = "off"}) 
         
     }
 
@@ -15,7 +15,7 @@
  <div class="card rounded my-3 shadow-lg back-card">
             <div class="card-top text-center">
               <div class="card-title my-3">
-                  <p>@Model.CityName Forecast</p>
+                  <p>@Model.CityName.ToUpper() Forecast</p>
                   <span>...</span>
               </div>
 
